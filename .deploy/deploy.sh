@@ -16,13 +16,14 @@ if [ "${TRAVIS_TAG:0:4}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
   cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
   cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-prod-debug.apk
 #  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
-  cd dash-wallet-staging || exit
+  README_PATH=dash-wallet-staging/"$TRAVIS_TAG"/README.md
   if [ "${TRAVIS_TAG:0:4}" = "NMA-" ]; then
-    printf 'https://dashpay.atlassian.net/browse/%s\n\n' "$TRAVIS_TAG" > README.md
+    printf 'https://dashpay.atlassian.net/browse/%s\n\n' "$TRAVIS_TAG" > "$README_PATH"
   fi
-  git show "$TRAVIS_TAG" >> README.md
+  git show "$TRAVIS_TAG" >> "$README_PATH"
+  cd dash-wallet-staging || exit
   git add .
-  git commit -m "travis deploy for $TRAVIS_TAG"
+  git commit -m "Travis CI deploy $TRAVIS_TAG"
   git push origin master
 
   # clean up the mess

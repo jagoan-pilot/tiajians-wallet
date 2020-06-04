@@ -7,6 +7,7 @@ if [ "${TRAVIS_TAG:0:4}" = "nma-" ]; then
 fi
 
 if [ "${TAG_NAME:0:4}" = "NMA-" ] || [ "${TAG_NAME:0:4}" = "dpl-" ]; then
+  echo
   # sync tags with remote
   git tag -l | xargs git tag -d > /dev/null 2>&1
   git fetch --tags > /dev/null 2>&1
@@ -24,10 +25,11 @@ if [ "${TAG_NAME:0:4}" = "NMA-" ] || [ "${TAG_NAME:0:4}" = "dpl-" ]; then
   git tag -a "$TAG_NAME" -m "$TAG_MESSAGE"
 
   git push origin "$TAG_NAME"
-  echo "DONE"
 
 else
-  echo "Specify JIRA ticket \"NMA-XXX\" or deploy name prefixed with \"dpl-\" eg. dpl-RCv7.0.9"
+  echo "Specify JIRA ticket \"NMA-XXX\" or deploy name prefixed with \"dpl-\""
   echo "You can also add a description as a second parameter"
   echo "eg. deploy.sh dpl-RCv8.0.1 \"Minor bug fixes\""
 fi
+echo
+read -n 1 -r -s -p "Press any key to continue..."
