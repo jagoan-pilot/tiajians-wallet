@@ -10,16 +10,13 @@ export DEPLOY_DATE
 echo "Deploy date $DEPLOY_DATE"
 export DEPLOY_FILE_NAME=dash-wallet-_testNet3-debug-$DEPLOY_DATE.apk
 ls -l wallet/build/outputs/apk/_testNet3/debug/
-#git config --local user.name "tomasz-ludek"
-#git config --local user.email "tomasz@dash.org"
-#git clone https://github.com/tomasz-ludek/travis-staging.git
 git clone git@github.com:dash-mobile-team/dash-wallet-staging.git
-cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk travis-staging/$DEPLOY_FILE_NAME
-cd travis-staging || exit
+cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$DEPLOY_FILE_NAME"
+cd dash-wallet-staging || exit
 git add .
 git commit -m "travis deploy $DEPLOY_DATE"
 git push origin master
 cd ..
-rm -rf travis-staging
+rm -rf dash-wallet-staging
 rm -rf "$TRAVIS_BUILD_DIR"/app/build/outputs
 echo "Deploy done"
