@@ -12,7 +12,8 @@ export DEPLOY_FILE_NAME=dash-wallet-_testNet3-debug-$DEPLOY_DATE.apk
 ls -l wallet/build/outputs/apk/_testNet3/debug/
 #git config --local user.name "tomasz-ludek"
 #git config --local user.email "tomasz@dash.org"
-git clone https://github.com/tomasz-ludek/travis-staging.git
+#git clone https://github.com/tomasz-ludek/travis-staging.git
+git clone git@github.com:tomasz-ludek/travis-staging.git
 cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk travis-staging/$DEPLOY_FILE_NAME
 cd travis-staging || exit
 git add .
