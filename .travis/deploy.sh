@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
+#if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
 
   cd "$TRAVIS_BUILD_DIR" || exit
 
@@ -31,8 +31,10 @@ if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
   rm -rf "$TRAVIS_BUILD_DIR"/app/build/outputs
   echo "deleting tag $TRAVIS_TAG"
 #  git tag -d "$TRAVIS_TAG"
-  git push --delete origin $TRAVIS_TAG
-else
-  echo "Only tags "
-fi
+  git config --list
+  git push --delete origin "$TRAVIS_TAG"
+
+#else
+#  echo "Only tags "
+#fi
 echo "Deploy done"
