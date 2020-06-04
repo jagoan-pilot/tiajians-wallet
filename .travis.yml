@@ -10,7 +10,6 @@ env:
     - ANDROID_BUILD_TOOLS_VERSION=28.0.2
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_945ec88d7d8f_key -iv $encrypted_945ec88d7d8f_iv -in .deploy/id_rsa.enc -out .deploy/id_rsa -d
   # Install SDK license so Android Gradle plugin can install deps.
   - mkdir "$ANDROID_HOME/licenses" || true
   - echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > "$ANDROID_HOME/licenses/android-sdk-license"
@@ -86,7 +85,8 @@ script:
 #  - git config --local user.name "tomasz-ludek"
 #  - git config --local user.email "tomasz@dash.org"
 #  - git clone https://github.com/tomasz-ludek/travis-staging.git
-#before_deploy:
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_945ec88d7d8f_key -iv $encrypted_945ec88d7d8f_iv -in .deploy/id_rsa.enc -out .deploy/id_rsa -d
 #  - ls -l wallet/build/outputs/apk/_testNet3/debug/
 #  - export TRAVIS_TAG="1.$TRAVIS_BUILD_NUMBER"
 #  - echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
