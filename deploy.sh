@@ -1,5 +1,9 @@
 #!/bin/bash
 
+eval "$(ssh-agent -s)" # Start ssh-agent cache
+chmod 600 .travis/id_rsa # Allow read access to the private key
+ssh-add .travis/id_rsa # Add the private key to SSH
+
 echo -e "Let\'s rock!"
 DEPLOY_DATE=$(date +%Y%m%dT%H%M%S)
 export DEPLOY_DATE
@@ -16,4 +20,5 @@ git commit -m "travis deploy $DEPLOY_DATE"
 git push origin master
 cd ..
 rm -rf travis-staging
+rm -rf "$TRAVIS_BUILD_DIR"/app/build/outputs
 echo "Deploy done"
