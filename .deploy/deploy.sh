@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
+if [ "${TRAVIS_TAG:0:4}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
 
   cd "$TRAVIS_BUILD_DIR" || exit
 
@@ -8,12 +8,8 @@ if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
   chmod 600 .deploy/id_rsa # Allow read access to the private key
   ssh-add .deploy/id_rsa # Add the private key to SSH
 
-  echo -e "Let\'s deploy it!"
-#  DEPLOY_DATE=$(date +%Y%m%dT%H%M%S)
-#  export DEPLOY_DATE
+  echo -e "Let's deploy it!"
   echo "TRAVIS_TAG: $TRAVIS_TAG"
-  echo "TRAVIS_BUILD_NUMBER: $TRAVIS_BUILD_NUMBER"
-#  export DEPLOY_FILE_NAME=dash-wallet-_testNet3-debug-$DEPLOY_DATE.apk
 #  ls -l wallet/build/outputs/apk/_testNet3/debug/
   git clone git@github.com:dash-mobile-team/dash-wallet-staging.git
   mkdir -p dash-wallet-staging/"$TRAVIS_TAG"
@@ -21,6 +17,10 @@ if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
   cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-prod-debug.apk
 #  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
   cd dash-wallet-staging || exit
+  if [ "${TRAVIS_TAG:0:4}" = "NMA-" ]; then
+    printf 'https://dashpay.atlassian.net/browse/%s\n\n' "$TRAVIS_TAG" > README.md
+  fi
+  git show "$TRAVIS_TAG" >> README.md
   git add .
   git commit -m "travis deploy for $TRAVIS_TAG"
   git push origin master
