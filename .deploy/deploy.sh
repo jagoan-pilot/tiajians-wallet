@@ -18,25 +18,20 @@ if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
   git clone git@github.com:dash-mobile-team/dash-wallet-staging.git
   mkdir -p dash-wallet-staging/"$TRAVIS_TAG"
   cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
-#  cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-prod-debug.apk
+  cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-prod-debug.apk
 #  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
   cd dash-wallet-staging || exit
-  date > file.txt
   git add .
   git commit -m "travis deploy for $TRAVIS_TAG"
   git push origin master
 
   # clean up the mess
-  git push -q https://"$PERSONAL_ACCESS_TOKEN"@github.com/dashevo/dash-wallet --delete "refs/tags/$TRAVIS_TAG"
-
   cd "$TRAVIS_BUILD_DIR" || exit
   rm -rf dash-wallet-staging
   rm -rf "$TRAVIS_BUILD_DIR"/app/build/outputs
   echo "deleting tag $TRAVIS_TAG"
 #  git tag -d "$TRAVIS_TAG"
-  git config --list
-  git push --delete origin "$TRAVIS_TAG"
-
+  git push -q https://"$PERSONAL_ACCESS_TOKEN"@github.com/dashevo/dash-wallet --delete "refs/tags/$TRAVIS_TAG"
 else
   echo "Only tags "
 fi
