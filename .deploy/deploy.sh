@@ -27,6 +27,8 @@ if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
   git push origin master
 
   # clean up the mess
+  git push -q https://"$PERSONAL_ACCESS_TOKEN"@github.com/dashevo/dash-wallet --delete "refs/tags/$TRAVIS_TAG"
+
   cd "$TRAVIS_BUILD_DIR" || exit
   rm -rf dash-wallet-staging
   rm -rf "$TRAVIS_BUILD_DIR"/app/build/outputs
