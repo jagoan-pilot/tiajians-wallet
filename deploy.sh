@@ -7,10 +7,6 @@ echo
 echo "Preparing deploy"
 echo
 
-if [ "${TAG_NAME:0:4}" = "nma-" ]; then
-  TAG_NAME=${TAG_NAME^^} # convert nma- to NMA-
-fi
-
 if [ "${TAG_NAME:0:4}" = "NMA-" ] || [ "${TAG_NAME:0:4}" = "dpl-" ]; then
   # sync tags with remote
   git tag -l | xargs git tag -d > /dev/null 2>&1

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "${TRAVIS_TAG:0:4^^}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
+if [ "${TRAVIS_TAG:0:4}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
 
   cd "$TRAVIS_BUILD_DIR" || exit
 
@@ -18,7 +18,7 @@ if [ "${TRAVIS_TAG:0:4^^}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
   cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk "$DEPLOY_DIR"/dash-wallet-prod-debug.apk
 #  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
   README="$DEPLOY_DIR"/README.md
-  if [ "${TRAVIS_TAG:0:4^^}" = "NMA-" ]; then
+  if [ "${TRAVIS_TAG:0:4}" = "NMA-" ]; then
     printf 'https://dashpay.atlassian.net/browse/%s\n\n' "$TRAVIS_TAG" > "$README"
   fi
   git show "$TRAVIS_TAG" | grep -B20 "diff" >> "$README"
