@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
+if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
 
   cd "$TRAVIS_BUILD_DIR" || exit
 
@@ -16,11 +16,12 @@
 #  export DEPLOY_FILE_NAME=dash-wallet-_testNet3-debug-$DEPLOY_DATE.apk
 #  ls -l wallet/build/outputs/apk/_testNet3/debug/
   git clone git@github.com:dash-mobile-team/dash-wallet-staging.git
-  mkdir dash-wallet-staging/"$TRAVIS_TAG"
+  mkdir -p dash-wallet-staging/"$TRAVIS_TAG"
   cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
 #  cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-prod-debug.apk
 #  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
   cd dash-wallet-staging || exit
+  date > file.txt
   git add .
   git commit -m "travis deploy for $TRAVIS_TAG"
   git push origin master
@@ -34,7 +35,7 @@
   git config --list
   git push --delete origin "$TRAVIS_TAG"
 
-#else
-#  echo "Only tags "
-#fi
+else
+  echo "Only tags "
+fi
 echo "Deploy done"

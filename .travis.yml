@@ -75,20 +75,20 @@ notifications:
   email: false
 
 script:
-  #- ./gradlew test
-  - ./gradlew assemble_testNet3Debug
-#- rm -rf .gradle/4.4
+#  - ./gradlew test
+#  - ./gradlew assemble_testNet3Debug
+- rm -rf .gradle/4.4
 #- ./gradlew assembleProdDebug
 #- ./gradlew assembleProdRelease
 
-after_success:
+#after_success:
 #  - ls -l wallet/build/outputs/apk/_testNet3/debug/
 #  - git config --local user.name "tomasz-ludek"
 #  - git config --local user.email "tomasz@dash.org"
 #  - git clone https://github.com/tomasz-ludek/travis-staging.git
 #  - cd travis-staging
 #  - sh set_tags.sh
-before_deploy:
+#before_deploy:
 #  - ls -l wallet/build/outputs/apk/_testNet3/debug/
 #  - export TRAVIS_TAG="1.$TRAVIS_BUILD_NUMBER"
 #  - echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
@@ -101,5 +101,5 @@ deploy:
   script: bash .travis/deploy.sh
   skip_cleanup: true
   on:
-    branch: travis-deploy
-#    tags: true
+#    branch: travis-deploy
+    tags: true
