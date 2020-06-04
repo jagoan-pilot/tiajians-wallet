@@ -5,8 +5,8 @@ if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
   cd "$TRAVIS_BUILD_DIR" || exit
 
   eval "$(ssh-agent -s)" # Start ssh-agent cache
-  chmod 600 .travis/id_rsa # Allow read access to the private key
-  ssh-add .travis/id_rsa # Add the private key to SSH
+  chmod 600 .deploy/id_rsa # Allow read access to the private key
+  ssh-add .deploy/id_rsa # Add the private key to SSH
 
   echo -e "Let\'s deploy it!"
 #  DEPLOY_DATE=$(date +%Y%m%dT%H%M%S)
