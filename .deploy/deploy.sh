@@ -26,7 +26,7 @@ if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
   git commit -m "travis deploy for $TRAVIS_TAG"
   git push origin master
 
-  # do some clean-up
+  # clean up the mess
   cd "$TRAVIS_BUILD_DIR" || exit
   rm -rf dash-wallet-staging
   rm -rf "$TRAVIS_BUILD_DIR"/app/build/outputs

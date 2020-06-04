@@ -76,9 +76,9 @@ notifications:
 
 script:
 #  - ./gradlew test
-#  - ./gradlew assemble_testNet3Debug
-- rm -rf .gradle/4.4
-#- ./gradlew assembleProdDebug
+  - ./gradlew assemble_testNet3Debug
+  - rm -rf .gradle/4.4
+  - ./gradlew assembleProdDebug
 #- ./gradlew assembleProdRelease
 
 #after_success:
