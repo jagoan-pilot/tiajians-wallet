@@ -21,4 +21,8 @@ git push origin master
 cd ..
 rm -rf dash-wallet-staging
 rm -rf "$TRAVIS_BUILD_DIR"/app/build/outputs
+if [ "${TRAVIS_TAG:0:3}" = "NMA" ]; then
+  echo "deleting tag $TRAVIS_TAG"
+  git tag -d $TRAVIS_TAG
+fi
 echo "Deploy done"
