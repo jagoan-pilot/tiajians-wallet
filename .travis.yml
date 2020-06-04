@@ -98,8 +98,8 @@ before_deploy:
 #  - git tag $TRAVIS_TAG
 deploy:
   provider: script
-  script: bash deploy.sh
+  script: bash .travis/deploy.sh
   skip_cleanup: true
   on:
     branch: travis-deploy
-#    tags: true
+    tags: true
