@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "${TRAVIS_TAG:0:4}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
+if [ "${TRAVIS_TAG:0:4^^}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
 
   cd "$TRAVIS_BUILD_DIR" || exit
 
