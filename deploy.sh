@@ -2,17 +2,20 @@
 
 TAG_NAME=$1
 DESCRIPTION=$2
-if [ "${TRAVIS_TAG:0:4}" = "nma-" ]; then
-  TAG_NAME=${TRAVIS_TAG^^} # convert nma- to NMA-
+
+echo
+echo "Preparing deploy"
+echo
+
+if [ "${TAG_NAME:0:4}" = "nma-" ]; then
+  TAG_NAME=${TAG_NAME^^} # convert nma- to NMA-
 fi
 
 if [ "${TAG_NAME:0:4}" = "NMA-" ] || [ "${TAG_NAME:0:4}" = "dpl-" ]; then
-  echo
   # sync tags with remote
   git tag -l | xargs git tag -d > /dev/null 2>&1
   git fetch --tags > /dev/null 2>&1
 
-  # create annotated tag
   if [ "${TAG_NAME:0:4}" = "NMA-" ]; then
     TAG_MESSAGE="JIRA ticket: https://dashpay.atlassian.net/browse/$TAG_NAME"
   else
@@ -22,6 +25,7 @@ if [ "${TAG_NAME:0:4}" = "NMA-" ] || [ "${TAG_NAME:0:4}" = "dpl-" ]; then
   if [ -z "$DESCRIPTION" ]; then
     echo "Description: $DESCRIPTION"
   fi
+  # create annotated tag
   git tag -a "$TAG_NAME" -m "$TAG_MESSAGE"
 
   git push origin "$TAG_NAME"

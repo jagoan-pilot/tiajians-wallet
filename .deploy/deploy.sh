@@ -12,15 +12,15 @@ if [ "${TRAVIS_TAG:0:4^^}" = "NMA-" ] || [ "${TRAVIS_TAG:0:4}" = "dpl-" ]; then
   echo "TRAVIS_TAG: $TRAVIS_TAG"
 #  ls -l wallet/build/outputs/apk/_testNet3/debug/
   git clone git@github.com:dash-mobile-team/dash-wallet-staging.git
-  mkdir -p dash-wallet-staging/"$TRAVIS_TAG"
-  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
-  cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-prod-debug.apk
+  DEPLOY_DIR=dash-wallet-staging/"$TRAVIS_TAG"
+  mkdir -p "$DEPLOY_DIR"
+  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk "$DEPLOY_DIR"/dash-wallet-_testNet3-debug.apk
+  cp wallet/build/outputs/apk/prod/debug/dash-wallet-prod-debug.apk "$DEPLOY_DIR"/dash-wallet-prod-debug.apk
 #  cp wallet/build/outputs/apk/_testNet3/debug/dash-wallet-_testNet3-debug.apk dash-wallet-staging/"$TRAVIS_TAG"/dash-wallet-_testNet3-debug.apk
-  README_PATH=dash-wallet-staging/"$TRAVIS_TAG"/README.md
-  if [ "${TRAVIS_TAG:0:4}" = "NMA-" ]; then
-    printf 'https://dashpay.atlassian.net/browse/%s\n\n' "$TRAVIS_TAG" > "$README_PATH"
+  if [ "${TRAVIS_TAG:0:4^^}" = "NMA-" ]; then
+    printf 'https://dashpay.atlassian.net/browse/%s\n\n' "$TRAVIS_TAG" > "$DEPLOY_DIR"/README.md
   fi
-  git show "$TRAVIS_TAG" >> "$README_PATH"
+  git show "$TRAVIS_TAG" >> "$DEPLOY_DIR"/README.md
   cd dash-wallet-staging || exit
   git add .
   git commit -m "Travis CI deploy $TRAVIS_TAG"
