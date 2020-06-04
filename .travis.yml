@@ -87,7 +87,6 @@ script:
 #  - git config --local user.email "tomasz@dash.org"
 #  - git clone https://github.com/tomasz-ludek/travis-staging.git
 #  - cd travis-staging
-#  - sh set_tags.sh
 #before_deploy:
 #  - ls -l wallet/build/outputs/apk/_testNet3/debug/
 #  - export TRAVIS_TAG="1.$TRAVIS_BUILD_NUMBER"
