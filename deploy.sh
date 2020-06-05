@@ -6,7 +6,7 @@ if [ -n "$2" ]; then
 fi
 
 echo
-echo "Preparing deploy-tag"
+echo "Preparing deploy $TAG_NAME"
 echo
 
 if [ "${TAG_NAME:0:4}" = "NMA-" ] || [ "${TAG_NAME:0:4}" = "dpl-" ]; then
@@ -27,7 +27,7 @@ if [ "${TAG_NAME:0:4}" = "NMA-" ] || [ "${TAG_NAME:0:4}" = "dpl-" ]; then
         read -r -p "Do you wish to force a new deploy (y/n)?" yn
         case $yn in
             [Yy]* ) git push --delete origin "$TAG_NAME"; break;;
-            [Nn]* ) break;;
+            [Nn]* ) exit;;
         esac
     done
     fi
