@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+	<string-array name="preferences_precision_labels">
+		<item>TJS, 8位數</item>
+		<item>TJS, 6位數</item>
+		<item>TJS, 4位數</item>
+		<item>mTJS, 2位數</item>
+		<item>µTJS, 0位數</item>
+	</string-array>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="symbol_to">→</string>
+	<string name="symbol_from">←</string>
+	<string name="symbol_internal">⇄</string>
+	<string name="app_name">Tiajians Wallet</string>
+	<string name="app_name_short">TJS</string>
+
+	<string-array name="preferences_precision_values">
+		<item>8</item>
+		<item>6</item>
+		<item>4</item>
+		<item>2/3</item>
+		<item>0/6</item>
+	</string-array>
+	<string-array name="preferences_precision_labels">
+		<item>@string/preferences_precision_labels_8</item>
+		<item>@string/preferences_precision_labels_6</item>
+		<item>@string/preferences_precision_labels_4</item>
+		<item>@string/preferences_precision_labels_2_3</item>
+		<item>@string/preferences_precision_labels_0_6</item>
+	</string-array>
+	<string-array name="preferences_block_explorer_values">
+		<item>https://explorer.tiajians.com/</item>
+	</string-array>
+	<string-array name="preferences_block_explorer_labels">
+		<item>Tiajians Block Explorer (Official)</item>
+	</string-array>
+	<string-array name="preferences_block_explorer_values_testnet">
+		<item>http://test.explorer.tiajians.com/</item>
+	</string-array>
+	<string-array name="preferences_block_explorer_labels_testnet">
+		<item>Tiajians Block Explorer (Official Testnet)</item>
+	</string-array>
+
+</resources>

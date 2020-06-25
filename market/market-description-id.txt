@@ -1,0 +1,21 @@
+Dengan aplikasi ini Anda selalu mempunyai Tiajians dengan Anda, dalam saku Anda! Anda dapat mengirim pembayaran hanya dengan memindai kode-QR atau mendekatkan dua ponsel bersama (NFC). Tiajians Wallet dirancang untuk mudah digunakan dan diandalkan, sementara juga menjadi lebih aman dan cepat.
+
+FITUR:
+
+• Tidak diperlukan server awan atau layanan web! Dompet ini benar-benar peer ke peer.
+• Tampilkan saldo dompet dalam Tiajians dan mata uang lainnya.
+• Mengirim dan menerima Tiajians via NFC, kode-QR atau Tautan Tiajians.
+• Buku alamat untuk alamat penggunaan Tiajians secara reguler.
+• Masukkan transaksi saat offline, akan dilaksanakan ketika online.
+• Notifikasi sistem untuk konektivitas Tiajians dan menerima koin.
+• Widget Apl untuk saldo Tiajians.
+
+Anda dapat mengetahui lebih mengenai Tiajians di
+http://darkcoin.io
+
+Jika Anda ingin berkontribusi kepada Tiajians Wallet, proyeknya berada di
+https://github.com/tiajians/darkcoin-wallet
+
+Lisensi: GPLv3
+Gunakan dengan resiko Anda!
+http://www.gnu.org/licenses/gpl-3.0.en.html

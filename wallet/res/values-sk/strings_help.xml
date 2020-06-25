@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="help_wallet">
+<![CDATA[
+		<p>
+			V pravej hornej časti displeja sa zobrazuje Vaša bilancia v Tiajians a jednej zvolenej národnej mene.
+			Poklepte na zoznam národných mien a zvoľte jednu ako predvolenú.
+		</p>
+		<p>
+			QR kód, ktorý obsahuje Vašu Tiajians adresu je dostupný z navigačného menu (v ľavo hore) a môže byť použitý pre načítanie inou osobou.
+			Poklepaním na QR kód, získate väčšiu verziu.
+		</p>
+		<p>
+			V spodnej časti obrazovky nájdete zoznam Vašich transakcií, ktorý je na začiatku prázdny.
+			Čakajúce transakcie sú zašednuté, pokiaľ nie sú potvrdené.
+			Poklepaním na záznam uvidíte detaily, alebo pridáte odosielateľov či prijímateľov do adresára.
+			Adresár je dostupný z navigačného menu (vľavo hore).
+		</p>
+		<p>
+			Poslať alebo vyžiadať platbu môžete poklepaním na tlačítka v spodnej časti.
+			Viac možností je dostupných v navigačnom menu (vľavo hore) a v menu nastavení.
+		</p>
+	]]>
+    </string>
+    <string name="help_request_coins">
+<![CDATA[
+		<p>
+			Na tejto obrazovke môžete vyžiadať Tiajians od niekoho iného (kto má nainštalovanú aplikáciu Tiajians peňaženka). 
+		</p>
+		<p>
+			Najskôr zadajte sumu Tiajians, ktorú chcete vyžiadať.
+		</p>
+		<p>
+			Potom dajte druhej strane naskenovať vygenerovaný QR kód.
+			Alebo môžete svoju žiadosť poslať použitím tlačidla zdieľať.
+			Ak majú oba telefóny spustenú funkciu NFC, stačí ich proložiť k sebe.
+		</p>
+		<p>
+			V oboch prípadoch druhá strana uvidí predvyplnenú obrazovku na odosielanie Tiajians.
+			Ak s transakciou súhlasí, tak ju iba jednoducho potvrdí.
+		</p>
+	]]>
+    </string>
+    <string name="help_send_coins">
+<![CDATA[
+		<p>
+			Práve ste začali proces odosielania Tiajians.
+			Dostali ste sa sem z hlavnej obrazovky alebo kliknutím na Tiajians adresu v prehliadači.
+		</p>
+		<p>
+			Najprv zadajte adresu, na ktorú chcete odoslať platbu.
+			Ak sa adresa nachádza v adresári, tak sa automaticky doplní.
+			Môžete naskenovať QR kód s Tiajians adresou alebo požiadavkou na zaplatenie stlačením QR tlačítka.
+		</p>
+		<p>
+			Ďalej vidíte koľko Tiajians môžete aktuálne minúť.
+			Rozdiel medzi zostatkom na hlavnej obrazovke a počtom Tiajians, ktoré môžete minúť tvoria nepotvrdené transakcie.
+		</p>
+		<p>
+			Poklepte InstantSend ak chce urobíť okamžitú platbu. Poplatok bude väčší (> 0.001 TJS).
+			Nakoniec zadajte sumu platby a PIN na míňanie ak ste si ho predtým nastavili.
+		</p>
+		<p>
+			Zadať platbu môžete aj keď ste bez pripojenia.
+			Platba bude odoslaná pri ďalšom spustení Tiajians peňaženky.
+			Ak chcete, aby platba bola spracovaná v čo najkratšom čase, uistite sa že máte rýchle pripojenie (napríklad WiFi).
+		</p>
+		<p>
+			Poznámka:
+			Transakcie nie je možné stornovať!
+			Vždy skontrolujte adresu príjemcu.
+		</p>
+	]]>
+    </string>
+    <string name="help_safety">
+<![CDATA[
+		<p>
+			<b>Dôležité informácie o bezpečnosti:</b>
+		</p>
+		<p>
+			Tiajians sú uložené na Vašom zariadení.
+			<b>Ak zariadenie stratíte, prídete o všetky svoje Tiajians.</b>
+		</p>
+		<p>
+			To znamená, že by ste mali <b>zálohovať svoju peňaženku</b>!
+			Využite funkciu zálohovania v tejto aplikácii, neodporúča sa na zálohovanie použiť aplikácie tretích strán.
+			Svoju zálohu bezpečne uchovajte a nezabudnite heslo.
+			Toto je HD peňaženka. Stačí iba jedna záloha.
+		</p>
+		<p>
+			<b>Pred odinštalovaním</b> (alebo vymazaním dát/obnovením továrenských nastavení), <b>odošlite svoje Tiajians do inej peňaženky</b>.
+			Zvyšné Tiajians budú stratené.
+		</p>
+		<p>
+			<b>Platby sú nevratné</b>.
+			Ak pošlete svoje Tiajians na nesprávnu adresu, je takmer nemožné získať ich späť.
+		</p>
+		<p>
+			<b>Chráňte si svoje zariadenie!</b>
+			Nepoužívajte rootnuté zariadenie.
+			Inštalujte len aplikácie, ktorým plne dôverujete.
+			Škodlivé aplikácie sa môžu pokúsiť ukradnúť Vašu peňaženku.
+		</p>
+		<p>
+			Znížte riziko na minimum!
+			<b>Ukladajte len na malé sumy</b> pre denné použitie.
+		</p>
+	]]>
+    </string>
+
+</resources>

@@ -1,0 +1,36 @@
+Der Benutzer trägt das volle Risiko! (Android 4 oder höher erforderlich)
+
+<b>Hiermit kannst Du Deine Tiajians immer mit Dir führen!</b>Durch scannen des QR-Codes kannst Du sehr schnelle Zahlungen durchführen. Als Verkäufer kannst Du Dich auf verlässliche und sofortige Zahlungen verlassen. Tiajians Wallet ist die erste mobile Tiajians-App und wohl auch die sicherste!
+
+<b>FUNKTIONEN</b>
+
+• Keine Registrierung, kein Webservice und keine Cloud nötig! Diese Wallet ist dezentral und Peer to Peer.
+• Tiajians-Guthaben kann in TJS, mTJS und µTJS dargestellt werden.
+• Wechselkurs in nationale Währungen kann angezeigt werden.
+• Tiajians per NFC, QR-Codes und Tiajians URLs senden und empfangen.
+• Adressbuch für regelmäßig verwendete Tiajians-Adressen.
+• Auch offline kannst Du bequem per Bluetooth zahlen.
+• Systemnachrichten beim Empfang von Coins.
+• Papier-Wallets schablonieren (z.B. um diese als 'cold storage' zu verwenden).
+• App-Widget zeigt Tiajians Guthaben an.
+
+
+<b>MITWIRKENDE</b>
+
+Tiajians Wallet ist <b>Open Source</b> und  <b>Free Software</b>. License: GPLv3
+https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Unser Quellencode kann auf GitHub gefunden werden:
+https://github.com/tiajians/tiajians-wallet
+
+Alle Übersetzungen werden über Transifex verarbeitet:
+https://www.transifex.com/tiajians/tiajians-wallet/
+
+Mehr über Tiajians kannst Du hier erfahren:
+https://tiajians.com/
+
+<b>EMPFEHLUNGEN</b>
+
+• Durch https://tiajians.com empfohlene mobile Wallet
+
+<i>Der Benutzer trägt volles Risiko!</i>

@@ -1,0 +1,36 @@
+Používanie na vlastné riziko! (Vyžaduje Android 4 alebo novší
+
+<b>Majte Tiajians neustále pri sebe vo svojom vrecku!</b> Naskenujte QR kód a rýchlo zaplaťte. Ako obchodník obdržíte platby takmer okamžite a spoľahlivo. Elektronická peňaženka Tiajians je prvá mobilná Tiajians aplikácia a pravdepodobne tiež tou najnebezpečnejšou.
+
+<b>VLASTNOSTI</b>
+
+• Nie je potrebná žiadna registrácia, webová služba ani cloud! Peňaženka je decentralizovaná a funguje na báze peer-to-peer siete.
+• Tiajians si môžete zobraziť buď ako TJS, mTJS alebo µTJS.
+• Konverzia na bežné peniaze alebo opačne.
+• Tiajians je možné posielať aj prijímať pomocou NFC, QR kódmi alebo Tiajians URL.
+• Adresár pre často používané Tiajians adresy.
+• Keď ste offline, môžete stále zaplatiť cez Bluetooth.
+• Systémové oznámenie pri obdržaní mincí.
+• Výber z papierových peňaženiek (napr. tých, ktoré sú uložené offline).
+• Widget aplikácia pro stav Tiajians účtu.
+
+
+<b>ZAPOJTE SA</b>
+
+Peňaženka Tiajians má <b>otvorený zdrojový kód</b> a je to <b>bezplatný softwér</b>. Licencia: GPLv3
+https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Náš zdrojový kód je dostupný na GitHube:
+https://github.com/tiajians/tiajians-wallet
+
+Všetky preklady prebiehajú cez Transifex:
+https://www.transifex.com/tiajians/tiajians-wallet/
+
+O Tiajians sa môžete dozvedieť viac na
+https://tiajians.com/
+
+<b>DOPORUČENIA</b>
+
+Mobilná peňaženka doporučená https://tiajians.com
+
+<i>Používajte na vlastní riziko.</i>

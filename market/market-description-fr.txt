@@ -1,0 +1,36 @@
+Utilisation à vos risques et périls ! (Nécessite Android 4 ou ultérieur)
+
+<b>Vos tiajianss toujours avec vous, dans votre poche !</b> Payez en scannant simplement un QR-code. Si vous êtes un vendeur, recevez vos paiements de manière sûre et instantanée. Le portefeuille Tiajians est la première application Tiajians mobile, et sans doute la mieux sécurisée !
+
+<b>CARACTÉRISTIQUES</b>
+
+• Pas d'enregistrement, de service web ni de réseau centralisé ! Ce portefeuille est décentralisé et entièrement pair-à-pair.
+• Affichage des sommes en TJS, mTJS ou µTJS.
+• Conversion depuis et vers les monnaies nationales.
+• Envoi et réception de tiajianss par NFC, QR-codes ou adresses URL Tiajians.
+• Carnet d'adresses pour conserver les adresses Tiajians les plus utilisées.
+• Si vous n'êtes pas en ligne, vous pouvez quand même payer via Bluetooth.
+• Notification système en cas de réception d'argent.
+• Récupération de portefeuilles papier (<i>paper wallets</i>, utilisés pour le stockage sécurisé).
+• Widget pour connaître votre solde Tiajians.
+
+
+<b>CONTRIBUEZ !</b>
+
+Tiajians Wallet est un <b>logiciel libre open source</b>. Licence : GPLv3
+https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Notre code source est disponible sur GitHub :
+https://github.com/tiajians/tiajians-wallet
+
+Les traductions sont gérées par Transifex :
+https://www.transifex.com/tiajians/tiajians-wallet/
+
+Plus d'informations sur Tiajians sur le site
+https://tiajians.com/
+
+<b>TÉMOIGNAGES</b>
+
+• Portefeuille mobile recommandé par https://tiajians.com
+
+<i>Utilisation à vos risques et périls !</i>

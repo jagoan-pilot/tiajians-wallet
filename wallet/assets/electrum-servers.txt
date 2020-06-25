@@ -1,0 +1,2 @@
+tcp:electrum.tiajians.com
+tcp:electrum-tjs.tiajians.com
